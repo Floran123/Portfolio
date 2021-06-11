@@ -1,0 +1,88 @@
+/*HOME*/
+
+#head
+{
+    font-size: 1.5rem;
+    margin-top: 300px;
+}
+
+#flo
+{
+    margin-left: 1200px;
+    margin-top: 60px;
+}
+
+#button
+{
+    margin-left: 80px;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+.colp
+{
+    font-size: 1rem;
+}
+
+/*PROJETS*/
+
+#phrase
+{
+    margin-left: 100px;
+}
+
+.gallery
+{
+    margin-left: 25px;
+}
+.gallery img
+{
+    width: 200px;
+    height: 150px;
+
+}
+
+/*EXPERIENCE PRO ET FORMATION*/
+
+#services
+{
+    margin-left: 5px;
+    padding: 1px;
+}
+
+#heads
+{
+    font-size: 2.3rem;
+}
+
+#service
+{
+    margin-left: 5px;
+    padding: 1px;
+}
+
+#headss
+{
+    font-size: 2.2rem;
+
+}
+
+.card{
+    width: 300px;
+}
+
+.cards{
+    width: 300px;
+    margin-left: 5px;
+}
+
+#hobby
+{
+    margin-left: 100px;
+}
+
+#information
+{
+    margin-left: 100px;
+
+}

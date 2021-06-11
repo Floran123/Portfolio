@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfessionalExperiences{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfessionalExperiences</h1>
+
+    {{ include('proffessional_experiences/_form.html.twig') }}
+
+    <a href="{{ path('proffessional_experiences_index') }}">back to list</a>
+{% endblock %}

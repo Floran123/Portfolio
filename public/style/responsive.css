@@ -1,0 +1,98 @@
+/*Navbar*/
+.navbar ul
+{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flo
+{
+    margin-left: 800px;
+    width: 200px;
+    height: 220px;
+    margin-bottom: 600px;
+}
+
+/*About me*/
+
+#pic
+{
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+#pic img
+{
+    width: 250px;
+    height: 200px;
+}
+
+#button
+{
+    margin-left: 300px;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+/*PROJETS*/
+
+#pro
+{
+    display: block;
+}
+
+#phrase
+{
+    margin-left: 300px;
+}
+
+.gallery
+{
+    margin-left: 150px;
+   
+ } 
+ 
+ #services
+{
+    display: block;
+    margin-left: 150px;
+}
+
+#service
+{
+    display: block;
+    margin-left: 150px;
+    
+}
+
+.info
+{
+    display: block ;
+}
+
+.card{
+    width: 700px;
+}
+
+.cards{
+    width: 700px;
+    margin-left: 5px;
+}
+
+.input
+{
+    width: 60%;
+}
+
+#msg
+{
+    width: 50%;
+}
+
+#send
+{
+    width: 20%;
+}

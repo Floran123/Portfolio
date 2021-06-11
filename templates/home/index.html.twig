@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+{% block title %}Mon Portfolio{% endblock %}
+
+{% block body %}
+{# <style>
+    .example-wrapper {  max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .title { font-weight: bold }
+    .navbar {}    
+</style> #}
+<link href="{{ "style/style.css" }}" type="text/css" rel="stylesheet">
+<link href="{{ "style/responsive.css" }}" media="screen and (max-width:850px)" type="text/css" rel="stylesheet">
+<link href="{{ "style/phone.css" }}" media="screen and (max-width:500px)" type="text/css" rel="stylesheet">
+
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#heading">Expériences professionel</a></li>
+        <li><a href="#headingss">Formations</a></li>
+        <li><a href="#competence">Compétences</a></li>
+        <li><a href="#hobby">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+</nav>
+
+<section id="home">
+    <img src="style/projets/floo.jpg" alt="" id="flo">
+    <div class="main">
+        <h1 class="headings" id="head"> I AM <br> FLORAN LEBRETON</h1>
+
+    </div>
+
+</section>
+
+<section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+
+    <div id="pic">
+        <img src="style/projets/floo.jpg" alt="">
+
+        <div id="intro">
+            <p class="colp">Déterminé, rigoureux, et passionné par le secteur de l’informatique, 
+            je souhaite me reconvertir en tant que développeur web et mobile. 
+            C’est pour cette raison que je désire intégrer la Web@demie by Epitech, 
+            qui saura m’apporter toutes les compétences qui me permettront d’évoluer 
+            et de m’épanouir dans mon projet professionnel. </p>
+            <p class="colp">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+        </div>
+       
+    
+    </div>
+        <div>
+            <button id="button"><a href="CV Floran Lebreton.pdf">Download CV</a></button>
+        </div>
+</section>
+                {# <section id="projets">
+                <h2 class="headings">MES PROJETS</h2>
+                <div id="phrase">
+                <a href="#" class="snapchat">Snapchat</a>
+                <a href="#"<p class="puissance4">Puissance 4</a>
+                <a href="#" class="spotify">Spotify</p>
+                <a href="#" class="myquizz">My quizz</a>
+                </div>
+                <div class="gallery">
+                    <img src="/style/photo/snapchat2.jpg" alt="">                    
+                    <img src="/style/photo/puissance4.png" alt="">
+                    <img src="/style/photo/spotify2.png" alt="">
+                    <img src="/style/photo/myquizz.png" alt="">
+                    <p id="phr">Re-création de l'application snapchat,<br> envoie de snap, lire des snap... <br>Projet réalisé en 1 semaine
+My quizz </p>
+                </div>
+                </section>
+             #}
+               
+               
+                <section id="projets">
+                <h2 class="headings">MES PROJETS</h2>
+                {# <div><p id="competence">
+                        php<br>
+                        sql<br>
+                        Javascript<br>
+                        html<br>
+                        css<br>
+                        Jquery<br>
+                        React<br>
+                        symfony<br>
+                        Node.js<br>
+               
+                </p></div> #}
+               
+            <section id="pro">
+                {% for projet in projets %}
+
+                <div id="proo">
+                <div id = "phrase"><a href="#">{{ projet.name }}</a></div>
+                
+               <div class="gallery"><a href="{{projet.link}}"><img src="{{ projet.image }}"/></a></div>
+                    
+                <div id="phr">{{ projet.description }}</div>
+                </div>
+            {% endfor %}
+                </section>
+
+            
+                </section>
+
+            <h1 class="headings" id="heading">Experiences Professionnel</h1>
+
+            <section id="services">
+
+
+            {% for professional_experience in professional_experiences %}
+                
+            <div class="row">
+                <div class = "box">
+                <h1 class="headings" id="heads">{{ professional_experience.name }}</h1>
+                <div id="descp">{{ professional_experience.description }}</div>
+                <div class="date">{{ professional_experience.date }}</div>
+                </div>
+            </div>    
+            {% endfor %}
+
+             </section>
+            <div id="black">          
+            <h2 id="headingss">Mes Formations</h2>
+
+            <section id="service">
+
+
+            {% for formation in formations %}
+
+            <div class="roww">
+                <div class = "boxx">
+                <h1 class="headings" id="headss">{{ formation.name }}</h1>
+                <div>{{ formation.description }}</div>
+                <div>{{ formation.gradelevel }}</div>
+                <div class="date">{{ formation.date }}</div>
+                </div>    
+            </div>
+            {% endfor %}
+
+            </section>
+            </div>
+
+            <section id="competence">
+            <h2 class="headingsss">Mes compétences</h2>  
+
+            <div class="container">
+            
+            {% for competence in competences %}
+           
+            <div class ="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{{ competence.image }}" class="skill-icon"/>
+                    </div>
+                    <h3>{{ competence.name }}</h3>
+                </div>
+            </div>
+
+            {% endfor %}
+            </div>
+            </section>
+        <div class="info">
+            <div class="card">
+            <h2 id="hobby">Hobbies</h2>
+
+            {% for hobby in hobbies %}
+
+            <div class="container">
+                <div class="title">{{ hobby.name }}</div>
+                <div>{{ hobby.description }}</div>
+            </div>
+
+            {% endfor %}
+
+            </div>
+            <div class="cards">
+            <h2 id="information">Mes informations</h2>
+            {% for information in information %}
+            <div class="container">
+                <div>{{ information.mail }}</div>
+                <div>{{ information.adress }}</div>
+                <span>{{ information.phoneNumber }}</span>
+                <div>{{ information.linkedin }}</div>
+            </div>
+            
+            
+
+            {% endfor %}
+            </div>
+            </div>
+        
+
+            <section id="contact">
+                <h1 class="headings">CONTACT</h1>
+                <form action"" class="form">
+                    <input type="text" name="name" class="input" placeholder="Enter your name">
+                    <input type="email" name="email" class="input" placeholder="Enter Your Email">
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                    <input type="submit" value="SEND" id="send">
+                </form>
+            </section>
+
+
+
+
+{% endblock %}

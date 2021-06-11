@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfessionalExperiences{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfessionalExperiences</h1>
+
+    {{ include('proffessional_experiences/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('proffessional_experiences_index') }}">back to list</a>
+
+    {{ include('proffessional_experiences/_delete_form.html.twig') }}
+{% endblock %}
